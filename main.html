@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div class="gridster">
+<ul>
+
+<!--Menue--->
+<li data-row="1" data-col="1" data-sizex="1" data-sizey="5" data-template="menu.html"></li>
+
+<li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+  <header>Uhrzeit</header>
+  <div data-type="clock" data-format="H:i" class="container bigger"></div>
+  <div data-type="clock" data-format="d-m-Y" class="cell"></div>
+<!--  	<div class="top-narrow-10 center">
+     	 <iframe src="http://www.zeitverschiebung.net/clock-widget-iframe?language=de&timezone=Europe%2FBerlin"
+              width="100%"
+              height="120"
+              frameborder="0"
+              seamless>
+      </iframe>
+    </div>-->
+</li>
+
+
+
+<li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+    <header>Heizung TWO/U</header>
+    <div data-type="thermostat" data-device="TWO_readings" data-get="TWO" data-temp="TWU" data-step="0.1" class="readonly" data-min="30" data-max="80"/div>
+</li>
+
+<li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+    <header>Heizung TPO/U</header>
+    <div data-type="thermostat" data-device="TWO_readings" data-get="TPO" data-temp="TPU" data-step="0.1" class="readonly" data-min="30" data-max="80"/div>
+</li>
+
+<li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
+        <header>Zysterne</header>
+        <div data-type="thermostat" data-device="Zysterne_readings" data-get="Fuellhoehe" class="readonly" data-min="0" data-max="160"/div>
+</li>
+
+<li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+        <header>Solar TSE/A</header>
+        <div data-type="thermostat" data-device="TWO_readings" data-get="TSA" data-temp="TSE" data-step="0.1" class="readonly" data-min="-20" data-max="120"/div>
+</li>
+
+<li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+        <header>Garage</header>
+        <div data-type="symbol" data-device="TuerKontakt1" data-get-on='["open","closed"]' data-icons='["oa-fts_garage warn","oa-fts_garage_door_90"]' data-on-colors='["#FF0000","#505050"]' class="cell" /div>
+</li>
+
+<li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+        <header>HausTür</header>
+        <div data-type="symbol" data-device="TuerKontakt_Garage_opt" data-get-on='["open","closed"]' data-icons='["oa-fts_door_open warn","oa-fts_door"]' data-off-colors='["#FF0000","#505050"]' class="cell" /div>
+</li>
+
+<li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+        <header>KellerTür</header>
+        <div data-type="symbol" data-device="TuerKontakt.UG.Heizraum.opt" data-get-on='["open","closed"]' data-icons='["oa-fts_door_open warn","oa-fts_door"]' data-on-colors='["#FF0000","#505050"]' class="cell" /div>
+</li>
+
+<li data-row="2" data-col="5" data-sizex="1" data-sizey="1">
+      <header>Sonne</header>
+      <div data-type="wind_direction" data-device="myTL" data-direction="azimuth" data-fix="0" data-size="50" tickstep="360"></div>
+			<div data-type="label" data-device="myTL" data-get="azimuth" data-fix="0"></div>
+			<div data-type="label" data-device="myTL" data-get="elevation" data-fix="1"></div>
+</li>
+
+
+<li data-row="4" data-col="3" data-sizex="1" data-sizey="1">
+	<header>Rolladen Auto</header>
+ 	<div data-type="switch" data-device="automatic" data-icon="oa-fts_shutter_automatic" data-get-off="off" data-get-on="on" class="top-space centered" ></div>
+</li>
+
+<li data-row="4" data-col="4" data-sizex="1" data-sizey="1">
+	<header>Rolladen AutoSchatten</header>
+ 	<div data-type="switch" data-device="automatic_schatten" data-icon="oa-fts_shutter_automatic" data-get-off="off" data-get-on="on" class="top-space centered" ></div>
+</li>
+
+<li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+        <header>Garage T/H</header>
+        <div data-type="thermostat" data-device="Temp_Garage" data-get="T_Garage" data-temp="Humidity_Garage:H_Garage.Av" data-step="0.1" class="readonly" data-min="0" data-max="80"/div>
+</li>
+
+<li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+        <header>Heizung VL</header>
+        <div data-type="thermostat" data-device="TWO_readings" data-get="VL" data-temp="VL" data-step="0.1" class="readonly" data-min="10" data-max="40"/div>
+</li>
+
+<!--<li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
+        <header>Board2 T/H</header>
+        <div data-type="thermostat" data-device="Temp_board2" data-get="T_board2.Av" data-temp="Humidity_board2:H_board2.Av" data-step="0.1" class="readonly" data-min="0" data-max="80"/div>
+</li>
+-->
+
+<li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
+	<header>Rolladen Zeit </header>
+ 	<div data-type="switch" data-device="zeitschalt" data-icon="oa-fts_shutter_automatic" data-get-off="off" data-get-on="on" class="top-space centered" ></div>
+</li>
+
+<li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
+	<header>Gaszähler </header>
+  <div class="">
+    <!--<div data-type="label" class="cell inline">Gesamt: </div>-->
+    <div data-type="label" data-device="Gaszaehler_direkt" data-get="Gaszaehler_direkt_FTUI" data-fix="1" class="inline"></div>
+    <div data-type="label" class="inline"> m³</div>
+  </div>
+  <div class="">
+    <div data-type="label" class="inline">Tag: </div>
+    <div data-type="label" data-device="Gasverbrauch" data-get="countsPerDay" class="inline"></div>
+    <div data-type="label" class="inline"> * 0.1m³</div>
+  </div>
+<!--<div data-type="push" data-device="lueftschalt"  data-set-on='["on-for-timer 1500","off"]' data-icon="fa-coffee" class="cell"></div>
+-->
+  </li>
+
+  <li data-row="4" data-col="5" data-sizex="1" data-sizey="1">
+  	<header>Stromzähler </header>
+    <div class="">
+      <!--<div data-type="label" class="cell inline">Gesamt: </div>-->
+      <div data-type="label" data-device="NodeMCU_Hall" data-get="Hall" data-fix="2" class="inline"></div>
+      <div data-type="label" class="inline"> m³</div>
+    </div>
+    <div class="">
+      <div data-type="label" class="inline">aktuell: </div>
+      <div data-type="label" data-device="NodeMCU_Stromverbrauch" data-get="Stromverbrauch" class="inline"></div>
+      <div data-type="label" class="inline"> W</div>
+    </div>
+  <!--<div data-type="push" data-device="lueftschalt"  data-set-on='["on-for-timer 1500","off"]' data-icon="fa-coffee" class="cell"></div>
+  -->
+    </li>
+
+
+<li data-row="5" data-col="5" data-sizex="1" data-sizey="1">
+	<header>Wetter</header>
+    <div class="">
+      <div data-type="label" class="inline">Temp</div>
+      <div data-type="label" data-device="Wetter2" data-get="temperature" class="inline"></div>
+      <div data-type="label" class="inline">°C</div>
+    </div>
+    <div class="">
+      <div data-type="label" class="inline">Humidity</div>
+      <div data-type="label" data-device="Wetter2" data-get="humidity" data-fix="0" class="inline"></div>
+      <div data-type="label" class="inline">%</div>
+    </div>
+    <div class="">
+      <div data-type="label" class="inline">Wetter</div>
+      <div data-type="label" data-device="Wetter2" data-get="weather" class="inline"></div>
+    </div>
+</li>
+
+<!--<li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+	<header>Wetter</header>
+ 	<div data-type="weather" data-device="Wetter2" data-get="temperature" class="inline"></div>
+  <div data-type="weather" data-device="Wetter2" data-get="humidity" class="inline"></div>
+
+</li>
+-->
+
+<li data-row="1" data-col="8" data-sizex="2" data-sizey="1">
+        <header>OG West Kind_klein</header>
+                  <div data-type="push" data-device="Rolladen.OG.West.Kind_klein" data-icon="fa-chevron-up" data-background-icon="fa-square-o" data-set-on="on" class="inline"></div>
+                  <div data-type="push" data-device="Rolladen.OG.West.Kind_klein" data-icon="fa-minus" data-background-icon="fa-square-o" data-set-on="stop" class="inline"></div>
+                  <div data-type="push" data-device="Rolladen.OG.West.Kind_klein" data-icon="fa-chevron-down" data-background-icon="fa-square-o" data-set-on="off" class="inline"></div>
+                  <div class="">
+                    <div data-type="label" data-device="Rolladen.OG.West.Kind_klein" data-get=level class="inline"></div>
+                  </div>
+</li>
+
+
+<li data-row="1" data-col="6" data-sizex="2" data-sizey="1">
+        <header>OG West Kind_gross</header>
+                  <div data-type="push" data-device="Rolladen.OG.West.Kind_gross" data-icon="fa-chevron-up" data-background-icon="fa-square-o" data-set-on="on" class="inline"></div>
+                  <div data-type="push" data-device="Rolladen.OG.West.Kind_gross" data-icon="fa-minus" data-background-icon="fa-square-o" data-set-on="stop" class="inline"></div>
+                  <div data-type="push" data-device="Rolladen.OG.West.Kind_gross" data-icon="fa-chevron-down" data-background-icon="fa-square-o" data-set-on="off" class="inline"></div>
+                  <div class="">
+                    <div data-type="label" data-device="Rolladen.OG.West.Kind_gross" data-get=level class="inline"></div>
+                  </div>
+</li>
+
+
+<li data-row="2" data-col="6" data-sizex="2" data-sizey="1">
+        <header>OG Sued Kind_gross</header>
+                  <div data-type="push" data-device="Rolladen.OG.Sued.Kind_gross" data-icon="fa-chevron-up" data-background-icon="fa-square-o" data-set-on="on" class="inline"></div>
+                  <div data-type="push" data-device="Rolladen.OG.Sued.Kind_gross" data-icon="fa-minus" data-background-icon="fa-square-o" data-set-on="stop" class="inline"></div>
+                  <div data-type="push" data-device="Rolladen.OG.Sued.Kind_gross" data-icon="fa-chevron-down" data-background-icon="fa-square-o" data-set-on="off" class="inline"></div>
+                  <div class="">
+                    <div data-type="label" data-device="Rolladen.OG.Sued.Kind_gross" data-get=level class="inline"></div>
+                  </div>
+</li>
+
+<li data-row="2" data-col="8" data-sizex="2" data-sizey="1">
+        <header>OG West beide</header>
+		              <div data-type="push" data-device="Rolladen.OG.West" data-icon="oa-fts_shutter_80" data-background-icon="fa-square-o" data-set-on="fast_zu" class="inline"></div>
+		              <div data-type="push" data-device="Rolladen.OG.West" data-icon="oa-fts_shutter_40" data-background-icon="fa-square-o" data-set-on="halb_zu" class="inline"></div>
+                  <div class="">
+                    <div data-type="label" data-device="Rolladen.OG.West.Kind_gross" data-get=level class="inline"></div>
+                    <div data-type="label" data-device="Rolladen.OG.West.Kind_klein" data-get=level class="inline"></div>
+                  </div>
+</li>
+
+<li data-row="3" data-col="8" data-sizex="2" data-sizey="1">
+        <header>EG West Buero</header>
+                  <div data-type="push" data-device="Rolladen.EG.West.Buero" data-icon="fa-chevron-up"  data-background-icon="fa-square-o" data-set-on="on" class="inline"></div>
+                  <div data-type="push" data-device="Rolladen.EG.West.Buero" data-icon="fa-minus"  data-background-icon="fa-square-o" data-set-on="stop" class="inline"></div>
+		              <div data-type="push" data-device="Rolladen.EG.West.Buero" data-icon="fa-chevron-down"  data-background-icon="fa-square-o" data-set-on="off" class="inline"></div>
+                  <div class="">
+                    <div data-type="label" data-device="Rolladen.EG.West.Buero" data-get=level class="inline"></div>
+                  </div>
+</li>
+
+
+<li data-row="3" data-col="6" data-sizex="2" data-sizey="1">
+        <header>EG West Wohnzimmer</header>
+                  <div data-type="push" data-device="Rolladen.EG.West.Wohnzimmer" data-icon="fa-chevron-up" data-background-icon="fa-square-o" data-set-on="on" class="inline"></div>
+                  <div data-type="push" data-device="Rolladen.EG.West.Wohnzimmer" data-icon="fa-minus" data-background-icon="fa-square-o" data-set-on="stop" class="inline"></div>
+		              <div data-type="push" data-device="Rolladen.EG.West.Wohnzimmer" data-icon="fa-chevron-down" data-background-icon="fa-square-o" data-set-on="off" class="inline"></div>
+                  <div class="">
+                    <div data-type="label" data-device="Rolladen.EG.West.Wohnzimmer" data-get=level class="inline"></div>
+                  </div>
+</li>
+
+
+<li data-row="4" data-col="6" data-sizex="4" data-sizey="1">
+        <header>EG Sued Wohnzimmer Alle</header>
+                  <div data-type="push" data-device="Rolladen.EG.Sued" data-icon="fa-chevron-up" data-background-icon="fa-square-o" data-set-on="auf" class="inline"></div>
+                  <div data-type="push" data-device="Rolladen.EG.Sued" data-icon="fa-minus" data-background-icon="fa-square-o" data-set-on="stop" class="inline"></div>
+    		          <div data-type="push" data-device="Rolladen.EG.Sued" data-icon="fa-chevron-down" data-background-icon="fa-square-o" data-set-on="zu" class="inline"></div>
+    		          <div data-type="push" data-device="Rolladen.EG.Sued" data-icon="oa-fts_shutter_80" data-background-icon="fa-square-o" data-set-on="fast_zu" class="inline"></div>
+    		          <div data-type="push" data-device="Rolladen.EG.Sued" data-icon="oa-fts_shutter_40" data-background-icon="fa-square-o" data-set-on="halb_zu" class="inline"></div>
+                  <div class="">
+                    <div data-type="label" data-device="Rolladen.EG.Sued.Wohnzimmer.links" data-get=level class="inline"></div>
+                    <div data-type="label" data-device="Rolladen.EG.Sued.Wohnzimmer.mitte" data-get=level class="inline"></div>
+                    <div data-type="label" data-device="Rolladen.EG.Sued.Wohnzimmer.rechts" data-get=level class="inline"></div>
+                  </div>
+</li>
+
+<li data-row="5" data-col="6" data-sizex="4" data-sizey="1">
+  <header>UG West beide</header>
+    <div data-type="push" data-device="Rolladen.UG.West" data-icon="fa-chevron-up" data-background-icon="fa-square-o" data-set-on="auf" class="inline"></div>
+    <div data-type="push" data-device="Rolladen.UG.West" data-icon="fa-minus" data-background-icon="fa-square-o" data-set-on="stop" class="inline"></div>
+		<div data-type="push" data-device="Rolladen.UG.West" data-icon="fa-chevron-down" data-background-icon="fa-square-o" data-set-on="zu" class="inline"></div>
+		<div data-type="push" data-device="Rolladen.UG.West" data-icon="oa-fts_shutter_80" data-background-icon="fa-square-o" data-set-on="fast_zu" class="inline"></div>
+		<div data-type="push" data-device="Rolladen.UG.West" data-icon="oa-fts_shutter_40" data-background-icon="fa-square-o" data-set-on="halb_zu" class="inline"></div>
+    <div class="">
+      <div data-type="label" data-device="Rolladen.UG.West.links" data-get=level class="inline"></div>
+      <div data-type="label" data-device="Rolladen.UG.West.rechts" data-get=level class="inline"></div>
+    </div>
+</li>
+
+
+<li data-row="5" data-col="2" data-sizex="1" data-sizey="1">
+      <header>Wetter heute</header>
+      <div data-type="weather" data-device="Wetter2" data-get="fc0_weatherDay" data-imageset="meteocons" class="cell"></div>
+      <!--  <div data-type="label" data-device="Wetter2" data-get="fc0_weatherDay" class="cell"></div>>!-->
+
+      <div data-type="label" data-device="Wetter2" data-get="fc0_tempMin" data-unit="%B0C%0A" class="cell inline"></div>
+      <div data-type="label" data-device="Wetter2" data-get="fc0_tempMax" data-unit="%B0C%0A" class="cell inline"></div>
+</li>
+
+<li data-row="5" data-col="3" data-sizex="1" data-sizey="1">
+      <header>morgen</header>
+      <div data-type="weather" data-device="Wetter2" data-get="fc1_weatherDay" data-imageset="meteocons" class="cell"></div>
+      <!--<div data-type="label" data-device="Wetter2" data-get="fc1_weatherDay" class="cell"></div>-->
+      <div data-type="label" data-device="Wetter2" data-get="fc1_tempMin" data-unit="%B0C%0A" class="cell inline"></div>
+      <div data-type="label" data-device="Wetter2" data-get="fc1_tempMax" data-unit="%B0C%0A" class="cell inline"></div>
+</li>
+
+<li data-row="5" data-col="4" data-sizex="1" data-sizey="1">
+      <header>übermorgen</header>
+      <div data-type="weather" data-device="Wetter2" data-get="fc2_weatherDay" data-imageset="meteocons" class="cell"></div>
+      <!--<div data-type="label" data-device="Wetter2" data-get="fc2_weatherDay" class="cell"></div>-->
+      <div data-type="label" data-device="Wetter2" data-get="fc2_tempMin" data-unit="%B0C%0A" class="cell inline"></div>
+      <div data-type="label" data-device="Wetter2" data-get="fc2_tempMax" data-unit="%B0C%0A" class="cell inline"></div>
+</li>
+
+</ul>
+</div>
+</body>
+</html>
