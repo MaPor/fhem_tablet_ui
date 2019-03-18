@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div class="gridster">
+<ul>
+
+<li data-row="1" data-col="1" data-sizex="1" data-sizey="5" data-template="menu.html"></li>
+
+
+<li data-row="1" data-col="2" data-sizex="3" data-sizey="1">
+  <header>UG West beide</header>
+    <div data-type="push" data-device="Rolladen.UG.West" data-icon="fa-chevron-up" data-background-icon="fa-square-o" data-set-on="auf" class="inline"></div>
+    <div data-type="push" data-device="Rolladen.UG.West" data-icon="fa-minus" data-background-icon="fa-square-o" data-set-on="stop" class="inline"></div>
+		<div data-type="push" data-device="Rolladen.UG.West" data-icon="fa-chevron-down" data-background-icon="fa-square-o" data-set-on="zu" class="inline"></div>
+		<div data-type="push" data-device="Rolladen.UG.West" data-icon="oa-fts_shutter_80" data-background-icon="fa-square-o" data-set-on="fast_zu" class="inline"></div>
+		<div data-type="push" data-device="Rolladen.UG.West" data-icon="oa-fts_shutter_40" data-background-icon="fa-square-o" data-set-on="halb_zu" class="inline"></div>
+    <div class="">
+      <div data-type="label" data-device="Rolladen.UG.West.links" data-get=level class="inline"></div>
+      <div data-type="label" data-device="Rolladen.UG.West.rechts" data-get=level class="inline"></div>
+    </div>
+</li>
+    <!--<div data-type="label" class="">hoch  -  stop  -  runter  -  halb_zu  -  fast_zu</div>-->
+
+<li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+    	<header>Lüftung Relais 1</header>
+     	<div data-type="switch" data-device="relais1" data-icon="oa-vent_ventilation_level_0" data-get-off="off" data-get-on="on" class="top-space centered" ></div>
+</li>
+
+  <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+    	<header>Lüftung Relais 2</header>
+     	<div data-type="switch" data-device="relais2" data-icon="oa-vent_ventilation_level_1" data-get-off="off" data-get-on="on" class="top-space centered" ></div>
+</li>
+
+<li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+	<header>FHEM Health</header>
+    <div data-type="label" data-device="HMLAN1" data-get="Xmit-Events" class="inline"></div>
+    <div data-type="label" data-device="HMLAN1" data-get="Xmit-Events" class="timestamp"></div>
+</li>
+
+
+</ul>
+</div>
+</body>
+</html>
